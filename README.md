@@ -1,105 +1,71 @@
-# ElectricityBillPaymentSystem
+Pension Contribution Management System
 
-An ASP.NET Core API application for managing user authentication, bill verification, bill payment, and wallet funding in an electricity bill payment system. This application supports SMS notifications and is designed using event-driven principles for handling updates to bills and payments.
+Overview
+A  .NET Core solution for managing pension contributions, member data, and benefit calculations following Clean Architecture and Domain-Driven Design principles.
 
----
+Key Features
 
-## Prerequisites
+Member Management: Registration, updates, retrieval, and soft-delete functionality
 
-- [.NET SDK 7.0](https://dotnet.microsoft.com/download/dotnet/7.0)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [Visual Studio](https://visualstudio.microsoft.com/) or another C# IDE
+Contribution Processing:
 
-## Setup and Run Instructions
+Monthly and voluntary contribution handling
 
-### 1. Clone the Repository
+Automated statement generation
 
-Clone the project to your local machine and navigate to the project directory.
+Business rule enforcement
 
-```bash
-git clone https://your-repo-url/ElectricityBillPaymentSystem.git
-cd ElectricityBillPaymentSystem
+Background Processing:
 
-### 2\. Configure the Database Connection
+Contribution validation
 
-Open Open appsettings.json and update the connection string to match your SQL Server configuration:
+Benefit eligibility updates
 
-"ConnectionStrings": {
-  "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=ElectricityBillPaymentDB;User Id=YOUR_USERNAME;Password=YOUR_PASSWORD;TrustServerCertificate=True;"
-}
+Interest calculations
 
+Comprehensive Validation:
 
-### 3\. Apply Database Migrations
+Member details verification
 
-Open a terminal or command prompt, navigate to the ElectricityBillPaymentSystem.Data project directory, and run the following commands to apply the database migrations:
+Contribution validation
 
-cd ElectricityBillPaymentSystem.Api
-dotnet ef database update
+Employer registration checks
 
-### 4\. Run the Application
+Technical Stack
+Framework: .NET 7+
 
-You can run the application using your IDE or via the command line.
+Database: SQL Server with Entity Framework Core
 
-#### Using Visual Studio
+Architecture: Clean Architecture + DDD
 
-1.  Open the solution file (ElectricityBillPaymentSystem.sln) in Visual Studio.
-    
-2.  Set ElectricityBillPaymentSystem.Api as the startup project.
-    
-3.  Press F5 to build and run the application.
-    
-
-#### Using Command Line
-
-Navigate to the ElectricityBillPaymentSystem.Api directory and run the following command:
-
-dotnet run
-
-### 5\. Access the Application
-
-*   **API**:  Access the API at https://localhost:5001/ or http://localhost:5000.
-.
-    
-*   **Swagger UI**: Explore the API endpoints at https://localhost:5001/swagger. to explore the API endpoints.
+Background Jobs: Hangfire
 
 
-### Project Structure and API Endpoints
-**AuthController**
-This controller manages user registration and login.
+Getting Started
 
-POST /auth/register: Registers a new user with details in RegisterUserDto.
-POST /auth/login: Authenticates a user and returns a token.
+Prerequisites
+.NET 7 SDK
 
-**ElectricityController**
-This controller handles bill operations and wallet management.
+SQL Server 2019+
 
-POST /api/electricity/verify: Verifies a bill using details in CreateBillDTO and initiates a bill creation event.
-POST /api/electricity/vend/{billId}/pay: Completes payment for a specified bill and triggers a payment event.
-POST /api/electricity/wallets/{walletId}/add-funds: Adds funds to a user’s wallet.
+Hangfire server (for background jobs)
 
- 
-**Event_Publishing**
-Events are simulated with a mock notification service and can be integrated with real services (e.g., Amazon SNS) for production use.
+Setup
+Clone the repository
 
-bill_created: Published after successful bill verification.
-payment_completed: Published upon successful bill payment.
+Configure connection strings in appsettings.json
+
+Run database migrations
 
 
-Troubleshooting
----------------
+Design Decisions
+Clean Architecture: Separation of concerns with clear layer boundaries
 
-*   Database Connection Issues: Ensure SQL Server is running and the connection string in appsettings.json is correct.
-    
-*   CORS Issues: Ensure CORS is properly configured in your ASP.NET Core application. You can modify the CORS settings in Program.cs if needed.
-    
-*   Port Conflicts: Ensure the ports you are using are not already in use on your machine.
-    
+DDD Patterns:
 
-Assumptions
------------
+Aggregates for Member/Contribution relationships
 
-*   The database is initialized with necessary tables and schema. If not, ensure migrations are applied successfully.
-    
-*   You have the required environment variables set up for your connection strings and other configurations.
-    
-*   The project uses default ports for SQL Server and the API. Adjust the ports in launchSettings.json or appsettings.json if necessary.
+Domain events for business process triggers
+
+Repository Pattern: Abstracted data access for testability
+
