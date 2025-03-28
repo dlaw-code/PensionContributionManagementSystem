@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F207DA1-693A-4677-8091-0148C566BDE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pension.INFRASTRUCTURE", "PensionContributionManagementSystem.Infrastructure\Pension.INFRASTRUCTURE.csproj", "{A5F2FA90-D996-43D7-B8E5-AB7D2A3F3B83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pension.DOMAIN", "PensionContributionManagementSystem.Domain\Pension.DOMAIN.csproj", "{34BDA0F0-E093-403F-B987-EA802005D9F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pension.DATA", "PensionContributionManagementSystem.Data\Pension.DATA.csproj", "{B1239838-FBC4-4F5F-9FF9-15925A5A02A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PensionWeb.API", "PensionContributionManagementSystem.Api\PensionWeb.API.csproj", "{8BE0B0E1-B118-422B-996D-950B12E0B8AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pension.CORE", "PensionContributionManagementSystem.Core\Pension.CORE.csproj", "{C96CECCB-80F1-4989-83B8-1E025B105208}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5F2FA90-D996-43D7-B8E5-AB7D2A3F3B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F2FA90-D996-43D7-B8E5-AB7D2A3F3B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F2FA90-D996-43D7-B8E5-AB7D2A3F3B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F2FA90-D996-43D7-B8E5-AB7D2A3F3B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34BDA0F0-E093-403F-B987-EA802005D9F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BDA0F0-E093-403F-B987-EA802005D9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BDA0F0-E093-403F-B987-EA802005D9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BDA0F0-E093-403F-B987-EA802005D9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1239838-FBC4-4F5F-9FF9-15925A5A02A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1239838-FBC4-4F5F-9FF9-15925A5A02A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1239838-FBC4-4F5F-9FF9-15925A5A02A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1239838-FBC4-4F5F-9FF9-15925A5A02A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE0B0E1-B118-422B-996D-950B12E0B8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE0B0E1-B118-422B-996D-950B12E0B8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE0B0E1-B118-422B-996D-950B12E0B8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE0B0E1-B118-422B-996D-950B12E0B8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C96CECCB-80F1-4989-83B8-1E025B105208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96CECCB-80F1-4989-83B8-1E025B105208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96CECCB-80F1-4989-83B8-1E025B105208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96CECCB-80F1-4989-83B8-1E025B105208}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1849C106-FD8E-4315-993A-6B59CC04456D}
+	EndGlobalSection
+EndGlobal
